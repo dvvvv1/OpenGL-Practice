@@ -1,0 +1,27 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 31.05.2015 18:45:35
+
+newmtl Material__25
+	Ns 50.0000
+	Ni 1.5000
+	d 0.7400
+	Tr 0.2600
+	Tf 0.7400 0.7400 0.7400 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__2_Flat Mirror.png
+
+newmtl Material__26
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.8157 0.9569 0.9843
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000

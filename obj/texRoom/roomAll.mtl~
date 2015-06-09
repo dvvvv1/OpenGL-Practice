@@ -1,0 +1,282 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 31.05.2015 21:56:13
+
+newmtl teaTableAndSticks__6
+	Ns 80.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0588 0.0588 0.0588
+	Kd 0.0588 0.0588 0.0588
+	Ks 0.8100 0.8100 0.8100
+	Ke 0.0000 0.0000 0.0000
+	map_Ka teaTable.jpg
+	map_Kd teaTable.jpg
+
+newmtl tvWall__5
+	Ns 80.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0039 0.0039 0.0039
+	Kd 0.0039 0.0039 0.0039
+	Ks 0.8100 0.8100 0.8100
+	Ke 0.0000 0.0000 0.0000
+	map_Ka plasticBlack.png
+	map_Kd plasticBlack.png
+
+newmtl picOnWall__2
+	Ns 65.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.7843 0.7843 0.5882
+	Kd 0.7843 0.7843 0.5882
+	Ks 0.5400 0.5400 0.5400
+	Ke 0.0000 0.0000 0.0000
+	map_Ka wallp1.jpg
+	map_Kd wallp1.jpg
+
+newmtl fruitBowl__2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9137 0.9137 0.9137
+	Kd 0.9137 0.9137 0.9137
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka cramicWhite.png
+	map_Kd cramicWhite.png
+
+newmtl kichair__14
+	Ns 60.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9020 0.0000 0.0000
+	Kd 0.9020 0.0000 0.0000
+	Ks 0.7200 0.7200 0.7200
+	Ke 0.0000 0.0000 0.0000
+	map_Ka red.jpg
+	map_Kd red.jpg
+
+newmtl chairsticks__11
+	Ns 80.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9216 0.9216 0.9216
+	Kd 0.9216 0.9216 0.9216
+	Ks 0.8100 0.8100 0.8100
+	Ke 0.0000 0.0000 0.0000
+	map_Ka metalWhite.jpg
+	map_Kd metalWhite.jpg
+
+newmtl kitchenTable__16
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.7882 0.9725
+	Kd 0.5882 0.7882 0.9725
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka skyblue.jpg
+	map_Kd skyblue.jpg
+
+newmtl cup__13
+	Ns 70.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.8745 0.8745 0.8745
+	Kd 0.8745 0.8745 0.8745
+	Ks 0.7200 0.7200 0.7200
+	Ke 0.0000 0.0000 0.0000
+	map_Ka cup.jpg
+	map_Kd cup.jpg
+
+newmtl plateAndCup__8
+	Ns 70.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9098 0.9098 0.9098
+	Kd 0.9098 0.9098 0.9098
+	Ks 0.7200 0.7200 0.7200
+	Ke 0.0000 0.0000 0.0000
+	map_Ka cramicWhite.png
+	map_Kd cramicWhite.png
+
+newmtl orange__17
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9098 0.4627 0.0667
+	Kd 0.9098 0.4627 0.0667
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka orange.jpg
+	map_Kd orange.jpg
+
+newmtl oven__19
+	Ns 80.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9686 0.9686 0.9686
+	Kd 0.9686 0.9686 0.9686
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka panasonic-microwave.png
+	map_Kd panasonic-microwave.png
+
+newmtl kitTable2__2
+	Ns 32.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.7294 0.9882
+	Kd 0.5882 0.7294 0.9882
+	Ks 0.5400 0.5400 0.5400
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Blue-energy.jpg
+	map_Kd Blue-energy.jpg
+
+newmtl floorPlain__4
+	Ns 32.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3922 0.3922 0.1961
+	Kd 0.3922 0.3922 0.1961
+	Ks 0.5400 0.5400 0.5400
+	Ke 0.0000 0.0000 0.0000
+	map_Ka floor.jpg
+	map_Kd floor.jpg
+
+newmtl tap__2
+	Ns 70.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9137 0.9137 0.9137
+	Kd 0.9137 0.9137 0.9137
+	Ks 0.7200 0.7200 0.7200
+	Ke 0.0000 0.0000 0.0000
+	map_Ka teaTable.jpg
+	map_Kd teaTable.jpg
+
+newmtl Wall1
+	Ns 32.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.7059 0.7059 0.7059
+	Kd 0.7059 0.7059 0.7059
+	Ks 0.2700 0.2700 0.2700
+	Ke 0.0000 0.0000 0.0000
+	map_Ka redBrick.jpg
+	map_Kd redBrick.jpg
+
+newmtl tvFace__7
+	Ns 32.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.6941 0.9686
+	Kd 0.5882 0.6941 0.9686
+	Ks 0.5400 0.5400 0.5400
+	Ke 0.0000 0.0000 0.0000
+	map_Ka tableFace3.jpg
+	map_Kd tableFace3.jpg
+
+newmtl chair__12
+	Ns 32.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.7843 0.7843 0.5882
+	Kd 0.7843 0.7843 0.5882
+	Ks 0.4500 0.4500 0.4500
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Leather-Sofa.jpg
+	map_Kd Leather-Sofa.jpg
+
+newmtl tableFace__10
+	Ns 32.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5922 0.7647 0.9216
+	Kd 0.5922 0.7647 0.9216
+	Ks 0.5400 0.5400 0.5400
+	Ke 0.0000 0.0000 0.0000
+	map_Ka tableFace.png
+	map_Kd tableFace.png
+
+newmtl tableStick__9
+	Ns 65.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9098 0.9098 0.9098
+	Kd 0.9098 0.9098 0.9098
+	Ks 0.7200 0.7200 0.7200
+	Ke 0.0000 0.0000 0.0000
+	map_Ka metalWhite.jpg
+	map_Kd metalWhite.jpg
+
+newmtl sofa__3
+	Ns 32.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.7843 0.7843 0.5882
+	Kd 0.7843 0.7843 0.5882
+	Ks 0.5850 0.5850 0.5850
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Leather-Sofa.jpg
+	map_Kd Leather-Sofa.jpg

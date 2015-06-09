@@ -1,0 +1,166 @@
+//Author: Puzhi Yao
+//Date: 18 May 2015
+//Program description:
+//CG Assignment 3 SKY GLASS KITCHEN
+
+
+/*********************************************************
+Version 1.000
+
+Code provided by Michael Hemsley and Anthony Dick
+for the course 
+COMP SCI 3014/7090 Computer Graphics
+School of Computer Science
+University of Adelaide
+
+Permission is granted for anyone to copy, use, modify, or distribute this
+program and accompanying programs and documents for any purpose, provided
+this copyright notice is retained and prominently displayed, along with
+a note saying that the original programs are available from the aforementioned 
+course web page. 
+
+The programs and documents are distributed without any warranty, express or
+implied.  As the programs were written for research purposes only, they have
+not been tested to the degree that would be advisable in any important
+application.  All use of these programs is entirely at the user's own risk.
+*********************************************************/
+
+#version 130
+
+const int num_lights = 4;
+in vec3 Position_worldspace;
+in vec3 Normal_cameraspace;
+in vec3 EyeDirection_cameraspace;
+in vec3 worldNormalDirection;
+in vec3 cameraPos;
+uniform mat4 view_matrix;
+uniform float wave;
+
+
+uniform vec3 LightPosition_worldspace[num_lights];
+uniform vec3 light_ambient[num_lights];     // Light ambient RGBA values
+uniform vec3 light_diffuse[num_lights];     // Light diffuse RGBA values  
+uniform vec3 light_specular[num_lights];    // Light specular RGBA values
+
+uniform vec3 mtl_ambient;  // Ambient surface colour
+uniform vec3 mtl_diffuse;  // Diffuse surface colour
+uniform vec3 mtl_specular; // Specular surface colour
+
+uniform float light_mode;
+uniform float shininess;
+
+// manyAttributes.fp
+// An example of using interpolated values from the previous stage
+
+in vec4 colour; // The per-vertex, colour attribute from the previous stage.
+
+				// Take note that _per-vertex attributes_ are sent from previous stage
+				// whereas uniforms are available for access in both stages
+
+in vec2 st;
+
+uniform sampler2D texMap0;
+uniform sampler2D texMap1;
+
+out vec4 fragColour;
+
+
+
+vec3 PhongLight(in vec3 LightPosition_worldspace1, in vec3 LightDirection_cameraspace1, in vec3 Position_worldspace1, in vec3 TextureNormal_tangentspace1, in vec3 EyeDirection_cameraspace1,
+                in vec3 light_ambient, in vec3 light_diffuse, in vec3 light_specular, in vec3 mtl_diffuse1, in vec3 mtl_ambient1, in vec3 mtl_specular1)
+                {
+                    // Material properties
+                    vec3 MaterialDiffuseColor = mtl_diffuse1;
+                    vec3 MaterialAmbientColor = mtl_ambient1;
+                    vec3 MaterialSpecularColor = mtl_specular1;
+
+                    // Distance to the light
+                    float distance = length( LightPosition_worldspace1 - Position_worldspace1 );
+
+                    // Normal of the computed fragment, in camera space
+                    vec3 n = normalize( TextureNormal_tangentspace1 );
+                    // Direction of the light (from the fragment to the light)
+                    vec3 l = normalize( LightDirection_cameraspace1 );
+                    // Cosine of the angle between the normal and the light direction,
+                    // clamped above 0
+                    // - light is at the vertical of the triangle -> 1
+                    // - light is perpendicular to the triangle -> 0
+                    // - light is behind the triangle -> 0
+                    float cosTheta = max( dot( n,l ), 0 );
+
+                    // Eye vector (towards the camera)
+                    vec3 E = normalize(EyeDirection_cameraspace1);
+                    // Direction in which the triangle reflects the light
+                    vec3 R = reflect(-l,n);
+   	    
+                    // clamped to 0
+                    // - Looking into the reflection -> 1
+                    // - Looking elsewhere -> < 1
+                    float cosAlpha = max( dot( E,R ), 0 );
+      
+                    // Ambient : simulates indirect lighting
+                    return MaterialAmbientColor * light_ambient +
+                    // Diffuse : "color" of the object
+                    MaterialDiffuseColor * light_diffuse * cosTheta / (distance*3) +
+                    // Specular : reflective highlight, like a mirror
+                    MaterialSpecularColor * light_specular * pow(cosAlpha, shininess) / (distance*3) ;
+                }
+
+
+
+void main(void) {
+            //flip texcoord to match the model
+     	    vec2 flip_texCoord = vec2(st[0],1.0 - st[1]);
+     	    
+            // Material properties
+            vec3 MaterialSpecularColor = mtl_specular;
+            
+            // Material properties
+            vec3 MaterialDiffuseColor = texture2D( texMap1, flip_texCoord ).rgb;
+            vec3 MaterialAmbientColor = vec3(0.1,0.1,0.1) * MaterialDiffuseColor;           
+
+            // Local normal, in tangent space.
+            vec3 TextureNormal_tangentspace = normalize(texture2D( texMap0, vec2(flip_texCoord.x,-flip_texCoord.y)   ).rgb*2.0 - 1.0);
+            
+            
+           
+            if(light_mode == 0)
+            {
+                // lamp 1 light 1
+                vec3 totLight = vec3(0.0,0.0,0.0);
+                for(int i = 0; i < 4; i++)
+                {                                        
+     	        vec3 LightPosition_cameraspace1 = ( view_matrix * vec4( LightPosition_worldspace[i],1)).xyz;
+     	        vec3 LightDirection_cameraspace1 =  LightPosition_cameraspace1 + EyeDirection_cameraspace;
+     	        
+     	        vec3 light1 =  PhongLight(LightPosition_worldspace[i], LightDirection_cameraspace1, Position_worldspace, TextureNormal_tangentspace, EyeDirection_cameraspace, light_ambient[i], vec3(1.0,1.0,1.0)+light_diffuse[i], vec3(1.0,1.0,1.0)+light_specular[i], MaterialDiffuseColor, MaterialAmbientColor, MaterialSpecularColor);
+     	        totLight = totLight + light1;
+     	        
+     	        }    	         	        
+     	        fragColour.xyz = totLight;
+     	        fragColour = vec4(fragColour.xyz,1.0) * texture(texMap1, flip_texCoord);
+            }
+            else{           
+                //vec3 incident = normalize(Position_worldspace - cameraPos);
+                //vec3 normal = normalize(TextureNormal_tangentspace*cos(wave));
+                
+                vec2 cPos = -1.0 + 2.0 * flip_texCoord.xy;
+                float cLength = length(cPos);
+                vec2 uv = flip_texCoord.xy+(cPos/cLength)*cos(cLength*12.0-wave*4.0)*0.03;
+                
+                //vec3 refracted = normalize(reflect(incident,normal));
+                fragColour =  texture(texMap1, uv);
+            }
+                     
+            /* ONLY for shader Debug
+            float bug=0.0;
+            vec3 tile=texture2D(texMap1, flip_texCoord).xyz;
+            vec4 col=vec4(tile, 1.0);
+
+            if(fragColour.z > 0.0) bug=1.0;
+
+            col.x+=bug;
+
+            fragColour=col;
+            */                    
+}

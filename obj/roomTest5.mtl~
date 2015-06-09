@@ -1,0 +1,232 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 31.05.2015 14:31:50
+
+newmtl mia_material_x1
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.50 0.50 0.50
+	Kd 0.50 0.50 0.50
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl tv_plastic
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.50 0.50 0.50
+	Kd 0.50 0.50 0.50
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl chrome
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.50 0.50 0.50
+	Kd 0.50 0.50 0.50
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl table_wood
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.00 0.00 0.00
+	Kd 0.40 0.40 0.40
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl phong2
+	Ns 58.19
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.00 0.00 0.00
+	Kd 0.71 0.71 0.71
+	Ks 0.12 0.12 0.12
+	Ke 0.09 0.09 0.09
+
+newmtl lambert6
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.00 0.00 0.00
+	Kd 0.40 0.40 0.40
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl white_plastic
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.50 0.50 0.50
+	Kd 0.50 0.50 0.50
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl mia_material6
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.50 0.50 0.50
+	Kd 0.50 0.50 0.50
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl orange
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.00 0.00 0.00
+	Kd 0.52 0.29 0.10
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl mia_material11
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.50 0.50 0.50
+	Kd 0.50 0.50 0.50
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl mia_material12
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.50 0.50 0.50
+	Kd 0.50 0.50 0.50
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl black_plastic
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.50 0.50 0.50
+	Kd 0.50 0.50 0.50
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl lambert1
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.00 0.00 0.00
+	Kd 0.40 0.40 0.40
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl wood_floors
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.00 0.00 0.00
+	Kd 0.40 0.40 0.40
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl cremaic_plate
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.50 0.50 0.50
+	Kd 0.50 0.50 0.50
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl Wall1
+	Ns 32.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.78 0.78 0.20
+	Kd 0.78 0.78 0.20
+	Ks 0.54 0.54 0.54
+	Ke 0.00 0.00 0.00
+	map_Ka stone-wall-2.jpg
+	map_Kd stone-wall-2.jpg
+
+newmtl blinn1
+	Ns 5.62
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.00 0.00 0.00
+	Kd 0.40 0.40 0.40
+	Ks 0.35 0.35 0.35
+	Ke 0.00 0.00 0.00
+
+newmtl chair_leg
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.50 0.50 0.50
+	Kd 0.50 0.50 0.50
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
+
+newmtl rubber_white
+	Ns 0.00
+	Ni 1.50
+	d 1.00
+	Tr 0.00
+	Tf 1.00 1.00 1.00 
+	illum 2
+	Ka 0.50 0.50 0.50
+	Kd 0.50 0.50 0.50
+	Ks 0.00 0.00 0.00
+	Ke 0.00 0.00 0.00
