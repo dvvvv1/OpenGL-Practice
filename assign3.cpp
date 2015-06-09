@@ -1950,7 +1950,7 @@ int main(int argc, char **argv) {
     std::cout << "Controls: "<<endl;
     std::cout << " - Press and drag mouse left button to rotate, press 'W', 'S', 'A', 'D' to move." <<endl;
     std::cout << " - Press 't' switch between Wireframe or Texture mode." <<endl;
-    std::cout << " - Press '1' switch between 1st Person mode and 3rd Person mode."<<endl;
+    std::cout << " - Press '1' and '2' switch between 1st Person mode and 3rd Person mode."<<endl;
     std::cout << "Enjoy it!"<<endl;
 
     // non-scaled initial Camera setting
