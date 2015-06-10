@@ -175,4 +175,14 @@ void main(void) {
      	        fragColour = vec4(fragColour.xyz,1.0);
      	        fragColour.a = 0.4;
      	}
+     	else if(light_mode == 6)
+     	{
+     	        vec3 LightPosition_cameraspace1 = ( view_matrix * vec4( LightPosition_worldspace[0],1)).xyz;
+     	        vec3 LightDirection_cameraspace1 =  LightPosition_cameraspace1 + EyeDirection_cameraspace;
+     	        
+     	        vec3 light1 =  PhongLight(LightPosition_worldspace[0], LightDirection_cameraspace1, Position_worldspace, Normal_cameraspace, EyeDirection_cameraspace, vec3(1.0,1.0,1.0)+ light_ambient[0], light_diffuse[0], light_specular[0], mtl_diffuse, mtl_ambient, mtl_specular);
+     	        
+     	        fragColour.xyz = light1;
+     	        fragColour = vec4(fragColour.xyz,1.0) * texture(texMap, flip_texCoord);  
+     	}
 }

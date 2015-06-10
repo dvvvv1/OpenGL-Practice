@@ -1544,7 +1544,7 @@ void draw()
         tmpAngle.push_back(wave*3);
         std::vector<glm::vec3> tmpRotAxis;
         tmpRotAxis.push_back(glm::vec3(1.0f,0.0f,0.0f));
-        modelVector7[i]->render(currentProgram,scales[6],viewMatrix, checkMode, lightingEffectSwitch[0],tempScaleVec, glm::vec3(0.0f,-2.0f,0.0f), tmpAngle, tmpRotAxis);
+        modelVector7[i]->render(currentProgram,scales[6],viewMatrix, checkMode, 6.0f,tempScaleVec, glm::vec3(0.0f,-2.0f,0.0f), tmpAngle, tmpRotAxis);
     }
 
 
