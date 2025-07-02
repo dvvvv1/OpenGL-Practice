@@ -1,4 +1,4 @@
-//Modified by: Puzhi Yao
+//Modified by: pz.yao
 //Date: 18 May 2015
 //Program description:
 //CG Assignment 3 SKY GLASS KITCHEN
